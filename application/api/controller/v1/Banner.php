@@ -10,6 +10,9 @@ namespace app\api\controller\v1;
 
 
 
+use app\api\validate\IDMustIntValidate;
+use app\api\validate\TestValidate;
+
 class Banner
 {
     /**
@@ -18,6 +21,7 @@ class Banner
      * @http GET
      */
     public function getBanner($id){
-        echo "hello banner";
+        (new IDMustIntValidate())->goCheck();
+
     }
 }
