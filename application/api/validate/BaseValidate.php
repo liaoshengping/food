@@ -1,5 +1,6 @@
 <?php
 namespace app\api\validate;
+use app\lib\exception\ParamFailException;
 use think\Exception;
 use think\Validate;
 
@@ -16,7 +17,7 @@ class BaseValidate extends Validate
         $res =$this->check($params);
         if(!$res){
             $error = $this->error;
-            throw new Exception($error);
+            throw new ParamFailException($error);
         }else{
             return true;
         }
