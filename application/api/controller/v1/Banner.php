@@ -11,7 +11,7 @@ namespace app\api\controller\v1;
 
 
 use app\api\validate\IDMustIntValidate;
-use app\api\validate\TestValidate;
+use app\lib\exception\BannerMissException;
 
 class Banner
 {
@@ -22,6 +22,12 @@ class Banner
      */
     public function getBanner($id){
         (new IDMustIntValidate())->goCheck();
+
+        $banner_info =\app\api\model\Banner::getBanerById();
+
+        if(!$banner_info){
+            throw new BannerMissException();
+        }
 
     }
 }
