@@ -1,13 +1,22 @@
 <?php
+
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// | ZKMALL
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
+// | Copyright (c) http://www.zhengkainet.com All rights reserved.
 // +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// | Author: ZKLIAOSHENGPING
 // +----------------------------------------------------------------------
-// | Author: 流年 <liu21st@gmail.com>
+// +----------------------------------------------------------------------
+// | DESCRIBE:
 // +----------------------------------------------------------------------
 
-// 应用公共文件
-\think\facade\Config::setYaconf('fooddev');
+
+namespace app\testapi\controller;
+
+
+class Wechat
+{
+
+
+}
