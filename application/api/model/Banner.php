@@ -11,6 +11,6 @@ use think\Model;
 class Banner extends Model
 {
     public static function getBanerById(){
-
+        
     }
 }

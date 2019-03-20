@@ -12,26 +12,33 @@
 // +----------------------------------------------------------------------
 
 
-namespace app\testapi\controller;
+namespace app\testapi\model;
 
-use app\testapi\exception\GetTokenException;
-use app\testapi\logic\WechatUserLogic;
-use app\testapi\model\WechatUser;
-use app\testapi\provider\WechatApp;
-class Wechat
+
+use think\Model;
+
+class WechatUser extends Model
 {
-    public function getToken($code){
-        $obj = new WechatApp();
-        $html =$obj->init()->getSessionKey($code);
-        $arr = json_decode($html,true);
-        if(!array_key_exists('openid',$arr)){
-            throw new GetTokenException();
+    /**
+     * 获取用户信息
+     * @param array $_where
+     */
+    public function getUser($_where=[]){
+        if(empty($_where)){
+            $_where=[
+                'is_delete'=>0
+            ];
         }
-        $openId = $arr['openid'];
-        $wechat_user_logic = new WechatUserLogic();
-        $user_info = $wechat_user_logic->getUserInfo($openId);
+        return $this->where($_where)->find();
+    }
 
-
+    /**
+     * 插入
+     * @param $data
+     * @return int|string
+     */
+    public function insertUser($data){
+        return $this->isUpdate(false)->allowField(true)->insertGetId($data);
     }
 
 }

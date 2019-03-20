@@ -8,18 +8,18 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-
+$db  = yaconf('db');
 return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',
+    'hostname'        => $db['hostname'],
     // 数据库名
-    'database'        => '',
+    'database'        => $db['database'],
     // 用户名
-    'username'        => 'root',
+    'username'        => $db['username'],
     // 密码
-    'password'        => '',
+    'password'        => $db['password'],
     // 端口
     'hostport'        => '',
     // 连接dsn

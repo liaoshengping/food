@@ -4,9 +4,91 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e373169c34ef1fada47de44b2b00cd2",
-    "content-hash": "296bd8a1d28e39d56dcd80ce7be249f3",
+    "hash": "ce8c26ecf54f81f847df9c8dd3fb677f",
+    "content-hash": "147d2c9e820793b9b163f9053044b260",
     "packages": [
+        {
+            "name": "jiaweixs/simplecache",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kulokai/simplecache.git",
+                "reference": "7848ce8eddd410292436dcc449e150a2e2d4a923"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kulokai/simplecache/zipball/7848ce8eddd410292436dcc449e150a2e2d4a923",
+                "reference": "7848ce8eddd410292436dcc449e150a2e2d4a923",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JiaweiXS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JiaweiXS",
+                    "email": "kurobafear@hotmail.com"
+                }
+            ],
+            "description": "A PHP Simple Cache Base on File.",
+            "keywords": [
+                "cache",
+                "simple cache"
+            ],
+            "time": "2017-08-24 06:23:28"
+        },
+        {
+            "name": "liaosp/weappcode",
+            "version": "1.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liaoshengping/weapp_wechat_miniapp_sdk.git",
+                "reference": "33cc2369c4a4c7310f411055c150fa22fdd28432"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liaoshengping/weapp_wechat_miniapp_sdk/zipball/33cc2369c4a4c7310f411055c150fa22fdd28432",
+                "reference": "33cc2369c4a4c7310f411055c150fa22fdd28432",
+                "shasum": ""
+            },
+            "require": {
+                "jiaweixs/simplecache": "*",
+                "php": "^5.5.9 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JiaweiXS\\WeApp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "liaosp",
+                    "email": "1194008361@qq.com"
+                }
+            ],
+            "description": "一个微信小程序服务端SDK，集成小程序服务端所有接口。A SDK of WeChat mini app.",
+            "keywords": [
+                "miniapp",
+                "wechat",
+                "wechat app"
+            ],
+            "time": "2019-03-19 13:08:08"
+        },
         {
             "name": "topthink/framework",
             "version": "v5.1.35",

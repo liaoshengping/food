@@ -12,12 +12,15 @@
 // +----------------------------------------------------------------------
 
 
-namespace app\testapi\controller;
+namespace app\testapi\exception;
 
 
-class Index
+use app\lib\exception\BaseException;
+
+class GetTokenException extends BaseException
 {
-    public function index(){
-        phpinfo();
-    }
+    public $code = '403';
+    public $msg =  '验证失败';
+    public $error_code = '41001';
+
 }
